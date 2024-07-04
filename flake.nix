@@ -19,7 +19,7 @@
       flake = false;
     };
     tidal-src = {
-      url = "github:tidalcycles/tidal/main";
+      url = "github:tidalcycles/Tidal/v1.9.5";
       flake = false;
     };
     vim-tidal-src = {
@@ -74,6 +74,7 @@
         name = "sclang-with-superdirt";
         runtimeInputs = [supercollider];
         text = ''
+          export QT_QPA_PLATFORM=offscreen
           ${supercollider}/bin/sclang -l "${superdirt}/sclang_conf.yaml" "$@"
         '';
       };
